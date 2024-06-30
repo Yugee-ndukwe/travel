@@ -1,0 +1,166 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .25);
+    width: 95%;
+    height: 80px;
+    border-radius: 13px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 9999;
+    background: #eee;
+}
+
+.navbar-logo{
+    color: #222;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-items{
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 10px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: #222;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 15px;
+    white-space: nowrap;
+
+}
+
+.nav-link i{
+    padding-right: 10px;
+}
+
+.nav-link:hover{
+    background: #01959a;
+    color: #fff;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link-mobile{
+    display: none;
+}
+
+.btn{
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    transition: 0.2s ease-in-out;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+/* .btn-link{
+    text-decoration: none;
+    color: #222;
+    padding-right: .8rem;
+} */
+
+.btn:hover{
+    background: #151516;
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* .btn-link:hover{
+    color: #fff;
+} */
+
+.menu-icon{
+    display: none;
+}
+
+
+@media(max-width: 850px){
+    .navbar{
+        z-index: 99;
+    }
+    .nav-items{
+        display: flex;
+        flex-direction: column;
+       justify-content: flex-start;
+        background: #fff;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        opacity: 0;
+        width: 100%;
+        height: auto;
+        padding: 80px 0 30px 0;
+        margin: 0;
+        text-align: center;
+        align-items: stretch;
+        transition: 0.4s ease-in-out;
+        border-radius: 13px;
+
+       
+
+    }
+
+    .nav-items.active{
+        left: 0;
+        opacity: 1;
+        z-index: -1;
+        transition: 0.4s ease-in-out;
+    }
+
+    .nav-link{
+        display: block;
+        width: 100%;
+        font-size: 18px;
+        padding: 20px 0;
+      
+    }
+
+    .nav-link:hover{
+        background: #01959a;
+        transition: none;
+        color: #fff;
+    }
+
+    .btn{
+        display: none;
+    }
+
+    .nav-link-mobile{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 1.5rem;
+        width: 80%;
+        margin: auto;
+        background: #01959a;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        white-space: nowrap;
+    }
+
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-icon i{
+        color: #222;
+        font-size: 22px;
+    }
+
+}   

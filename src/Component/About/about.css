@@ -1,0 +1,27 @@
+.about-container{
+    margin: 72px 108px;
+}
+
+.about-info{
+    /* padding: 18px 18px 0 0; */
+    text-align: start;
+}
+
+.about-info h1{
+    /* font-size: 36px; */
+    padding-bottom: 18px;
+}
+
+.about-info p{
+    /* font-size: 18px; */
+    padding-bottom: 36px;
+}
+
+@media(max-width: 850px) {
+    .about-container{
+        margin: 72px 36px;
+    }
+
+    
+
+}
