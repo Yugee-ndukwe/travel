@@ -3,12 +3,31 @@ import { Hero } from "../Hero/hero"
 import VID from '../../assets/video 1.jpg'
 import { AboutUs } from "../AboutUs/aboutus"
 import {Footer} from '../Footer/footer'
+import { FadeLoader } from 'react-spinners';
+import { useState, useEffect } from 'react';
 
 
 export function About(){
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+
+        // Cleanup timer in case the component unmounts before the timeout
+        return () => clearTimeout(timer);
+    }, []);
+
     return(
         <>
-           <MyNav/>
+        {loading ? (
+            <div className="spinner">
+            <FadeLoader color='#222' className='fade'/>
+        </div>
+        ) : (
+            <>
+            <MyNav/>
             <Hero
             cName="hero-about"
             heroImg={VID}
@@ -34,6 +53,9 @@ export function About(){
             />
             <Footer/>
             
+            </>
+        )}
+           
         </>
     )
 }

@@ -21,7 +21,7 @@ export function MyNav(){
                 </div>
                 <ul className={clicked ? 'nav-items active' : 'nav-items'}>
                     <li>
-                        <Link to={'/'} className='nav-link'> <i class="fa-sharp fa-solid fa-house-user"></i>Home</Link>
+                        <Link to={'/'} exact='true' className='nav-link'> <i class="fa-sharp fa-solid fa-house-user"></i>Home</Link>
                     </li>
                     <li>
                         <Link to={'/about'} className='nav-link'><i class="fa-sharp fa-solid fa-circle-info"></i>About</Link>

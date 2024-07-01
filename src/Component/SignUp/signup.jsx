@@ -3,7 +3,7 @@ import { MyNav } from '../Navbar/navbar';
 import { Hero } from '../Hero/hero';
 import './signup.css';
 import {Footer} from '../Footer/footer'
-// import {CircleLoader} from 'react-loader'
+import {FadeLoader} from 'react-spinners'
 
 export function SignUp() {
     const [tripDetails, setTripDetails] = useState([]);
@@ -34,7 +34,7 @@ export function SignUp() {
             setTimeout(()=>{
                 alert("Submission Successful");
             },1000)
-        }, 2000); // Simulate a delay for form submission
+        }, 3000); // Simulate a delay for form submission
     };
 
     return (
@@ -49,8 +49,8 @@ export function SignUp() {
                 <h1>Where Do You Want To Visit?</h1>
                 <form onSubmit={handleTrip}>
                     {loading ? (
-                        // <CircleLoader />
-                        <div>Submitting Your Trip</div>
+                        
+                        <div className='spinner-container'><FadeLoader color='#222' className='icon'/></div>
                     ) : (
                         <>
                             <input type="text" name="firstName" placeholder="First Name" required />

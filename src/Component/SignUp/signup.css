@@ -1,5 +1,6 @@
 .signup-page{
     padding: 4rem 6rem;
+    position: relative;
 }
 
 .signup-page h1{
@@ -42,6 +43,21 @@
 
     border-radius: 6px;
   }
+
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* z-index: 1000; */
+  
+  
+}
+
 
 
   @media(max-width: 850px){
