@@ -1,67 +1,50 @@
-.signup-page{
-    padding: 4rem 6rem;
-    position: relative;
+.signup-page {
+  padding: 4rem 6rem;
+  position: relative;
 }
 
-.signup-page h1{
-    text-align: center;
-    font-size: 24px;
+.signup-page h1 {
+  text-align: center;
+  font-size: 24px;
 }
 
-.signup-page form{
-    margin: auto;
-    width: 100%;
-    padding: 1.1rem .8rem;
-    display: flex;
-    flex-direction: column;
-    /* background: #efefe9; */
-    border-radius: 4px;
-    font-size: 18px;
-
+.signup-page form {
+  margin: auto;
+  width: 100%;
+  padding: 1.1rem .8rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  font-size: 18px;
 }
 
- form input{
-    height: 40px;
-    margin-bottom: 7px;
-    outline: 0;
-    border-bottom: 2px solid gray  ;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-radius: 6px;
-    box-shadow: 0 3px 0 4px  #ecdbdb ;
- }
-  form select{
-    height: 40px;
-    margin-bottom: 7px;
-    outline: 0;
-    border-top: 0;
-    border-bottom: 2px solid gray;
-    border-left: 0;
-    border-right: 0;
-    box-shadow: 0 3px 0 4px #ecdbdb;
+form input, form select {
+  height: 40px;
+  margin-bottom: 15px;
+  outline: 0;
+  border-bottom: 2px solid gray;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 6px;
+  box-shadow: 0 3px 0 4px #ecdbdb;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
 
-    border-radius: 6px;
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media(max-width: 850px) {
+  .signup-page {
+      padding: 4rem 2rem;
   }
-
-  .spinner-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* z-index: 1000; */
-  
-  
 }
-
-
-
-  @media(max-width: 850px){
-    .signup-page{
-        padding: 4rem 2rem;
-    }
-  }

@@ -76,8 +76,8 @@ export function SignUp() {
                                 <option value="Rome, Italy">Rome, Italy</option>
                             </select>
                             <input type="number" name="duration" placeholder="Duration (days)" required />
-                            <input type="date" name="startDate" required />
-                            <input type="date" name="endDate" required />
+                            <input type="date" name="startDate" placeholder='Start Date' required />
+                            <input type="date" name="endDate" placeholder='End Date' required />
 
                             <button type="submit" disabled={loading}>Add Trip</button>
                         </>
